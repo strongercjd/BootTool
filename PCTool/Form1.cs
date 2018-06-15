@@ -233,7 +233,8 @@ namespace PCTool
             }
             else
             {
-                MessageBox.Show("没有配置文件        ", "错误");
+                MessageBox.Show("没有XML配置文件        ", "错误");
+                Application.Exit();
             }
         }
 

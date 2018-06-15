@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <controller name="BX-M0">
+    <type_value>0x66</type_value>
+    <PCBvision name="V2.0">0X20</PCBvision>
+    <PCBvision name="V2.1">0X21</PCBvision>
+  </controller>
+  <controller name="BX-M1">
+    <type_value>0x68</type_value>
+    <PCBvision name="V2.2">0X22</PCBvision>
+    <PCBvision name="V2.3">0X23</PCBvision>
+  </controller>
+  <controller name="BX-M2">
+    <type_value>0x69</type_value>
+    <PCBvision name="V2.4">0X24</PCBvision>
+    <PCBvision name="V2.5">0X25</PCBvision>
+  </controller>
+</root>
