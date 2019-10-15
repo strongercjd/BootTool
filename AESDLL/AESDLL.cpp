@@ -1,7 +1,8 @@
 // AESDLL.cpp : 定义 DLL 应用程序的导出函数。
 //
-
 #include "stdafx.h"
+
+#include "AESDLL.h"
 
 
 
@@ -473,9 +474,8 @@ void inv_cipher(uint8_t *in, uint8_t *out, uint8_t *w) {
 }
 
 
-
 /**************************封装的初始化函数*****start*********************/
-extern "C" __declspec(dllexport) void AesEncInit(void)
+void AesEncInit(void)
 {
 	// 密钥扩展
 	key_expansion(key, w);
@@ -483,7 +483,7 @@ extern "C" __declspec(dllexport) void AesEncInit(void)
 /**************************封装的初始化函数*****end***********************/
 
 /**************************封装的加密函数*****start*********************/
-extern "C" __declspec(dllexport) void AesEncrypt(unsigned char * date)
+void AesEncrypt(unsigned char * date)
 {
 	uint8_t date_in[16];
 	uint8_t date_out[16];
@@ -495,7 +495,7 @@ extern "C" __declspec(dllexport) void AesEncrypt(unsigned char * date)
 /**************************封装的加密函数*****end***********************/
 
 /**************************封装的解密函数*****start*********************/
-extern "C" __declspec(dllexport) void AesDecrypt(unsigned char *date)
+void AesDecrypt(unsigned char *date)
 {
 	uint8_t date_in[16];
 	uint8_t date_out[16];
@@ -507,10 +507,11 @@ extern "C" __declspec(dllexport) void AesDecrypt(unsigned char *date)
 /**************************封装的解密函数*****end***********************/
 
 /**************************封装的设置秘钥函数*****start*********************/
-extern "C" __declspec(dllexport) void SetKey(unsigned char *KeyBuffer)
+void SetKey(unsigned char *KeyBuffer)
 {
 	memcpy(key, KeyBuffer, 32);
 }
 /**************************封装的设置秘钥函数*****end***********************/
+
 
 

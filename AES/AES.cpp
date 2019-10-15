@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include "AESDLL.h"
 using namespace std;
 int main()
 {
@@ -12,13 +13,13 @@ int main()
 	for (num = 0; num < 16;num++) {
 		cout << hex << (int)data[num] << ' ';
 	}
-	aes_init();
-	aes_encryption(data);
+	AesEncInit();
+	AesEncrypt(data);
 	cout << endl << "加密之后密文是：" << endl;
 	for (num = 0; num < 16; num++) {
 		cout << hex << (int)data[num] << ' ';
 	}
-	aes_decrypt(data);
+	AesDecrypt(data);
 	cout << endl << "解密之后明文是：" << endl;
 	for (num = 0; num < 16; num++) {
 		cout << hex << (int)data[num] << ' ';
